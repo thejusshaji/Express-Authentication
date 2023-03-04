@@ -1,0 +1,65 @@
+
+<!--=====HEAD======-->
+
+<%- include('../partials/head') %>
+
+<!--=====BODY=====-->
+
+<body>
+  <link rel="stylesheet" href="/stylesheets/contact.css">
+  <%- include('../partials/headerwhite') %>
+    
+    <section id="contact">
+        <div class="container ">
+            <div class="row">
+                <div class="offset md-4 col-md-4" style="margin-top: 5rem;">
+                    <h1>Please Register</h1>
+                    <form method="POST" autocomplete="off">
+                        <fieldset class="form-group">
+                            <label for="username">username:</label>
+                            <input type="text" class="form-control"
+                            name="username"
+                            placeholder="Enter username"
+                            id="username" required autofocus>
+                            </fieldset>
+    
+                            <fieldset class="form-group">
+                            <label for="password">password:</label>
+                            <input type="password" class="form-control"
+                            name="password"
+                            placeholder="Enter password"
+                            id="password" required>
+                            </fieldset>
+    
+                            <fieldset class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control"
+                            name="email"
+                            placeholder="Enter email Address"
+                            id="email" required>
+                            </fieldset>
+    
+                            <fieldset class="form-group">
+                            <label for="displayName">displayName:</label>
+                            <input type="text" class="form-control"
+                            name="displayName"
+                            placeholder="Enter display Name"
+                            id="displayName" required>
+                            </fieldset>
+    
+                            <fieldset class="form-group text-right" style="margin-top: 0.5rem;">
+                            <input type="submit" class="btn btn-success" value="Register">
+                            <a href="/"><input type="button" class="btn btn-warning" value="cancel"></a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+    <!--=====FOOTER======-->
+  
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

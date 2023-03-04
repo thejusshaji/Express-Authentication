@@ -1,0 +1,44 @@
+<header  class="header">
+    <div class="row">
+        <div class="col-xl-6 col-6 p-4 ps-5 d-flex align-items-center">
+            <a href="/index"><img src="images/LogoBlack.jpg" class="img-fluid rounded-circle"
+            style="max-width:25%;"> </a>
+        </div>
+        <div class="col-6 col-xl-6 d-flex flex-row-reverse d-flex align-items-center">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid text-white mx-auto">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto d-flex align-items-center">
+                         <li class="nav-item" >
+                            <a class="nav-link px-4" aria-current="page" href="/about" id="headings">ABOUT ME</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link px-4" href="/projects" id="headings">PROJECTS</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link px-4" href="/services" id="headings">SERVICES</a>
+                         </li>
+                         <li class="nav-item"><S></S>
+                             <a class="nav-link px-4" href="/contact" id="headings">CONTACT</a>
+                         </li>
+                         <li class="nav-item"><S></S>
+                          <a class="nav-link px-4" href="/businessList" id="headings">BusinessList</a>
+                      </li>
+                      <%if(typeof displayName =='string'&&displayName){%>
+                        <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome,<%=displayName%></li>
+                        <li class="nav-item">
+                        <a class="nav-link px-4" href="/logout"  id="headings">LOGOUT</a></li>
+                        <%}else{%>
+                          <li class="nav-item">
+                            <a class="nav-link px-4" href="/login" id="headings">LOGIN</a></li>
+                          <%}%>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>        
+</header>

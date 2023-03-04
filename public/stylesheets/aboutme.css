@@ -1,0 +1,54 @@
+.front{
+    background:linear-gradient(180deg,black,black,black);
+    padding-top: 5em;
+    padding-bottom: 8%;
+}
+
+#content{
+    color:rgba(255, 255, 255, 0.877);
+    font-family: "Courier New", Courier, monospace;
+}
+
+.skills{
+    background:linear-gradient(180deg,black,#333333,#555555);
+    padding-top: 15px;
+}
+
+#a{
+    align-items: center;
+}
+
+.card mt-3{
+    width: 18rem; height: 22rem;
+
+}
+
+.card-img-top {
+    width: 17.9rem;
+    height: 10vw;
+    object-fit: cover;
+    }
+
+#education{
+    background:linear-gradient(180deg,#555555,#999999);
+    color: black;
+}
+
+.footer{
+    background:white
+}
+
+#logofooter{
+    color:black
+}
+
+.header{
+    background-color:black; 
+    color:white;
+    width: 100%; 
+    z-index: 1;
+}
+
+#headings{
+    color:white;
+}

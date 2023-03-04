@@ -1,0 +1,84 @@
+
+<!--=====HEAD======-->
+
+<%- include('../partials/head') %>
+
+<!--=====BODY=====-->
+
+<body>
+  <link rel="stylesheet" href="/stylesheets/contact.css">
+  <%- include('../partials/headerwhite') %>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="row">        
+                <div class="offset-md-1 col-md-10" style="margin-top: 5rem;">
+                 <h1><%=title %></h1>
+                 <%if(typeof displayName =='string'&&displayName){%>
+                 <a href="/businessList/add" class="btn btn-primary" role="button" style="margin-top: 0.5rem; margin-bottom: 0.5rem;"><i class="fas fa-plus-circle"></i>Add a Business Contact</a>
+                 <%}%>
+                 <br>
+                 <table class="table table-bordered table-striped table-hover">
+                     <!--Header Row-->
+                     <tr>
+                        <%if(typeof displayName =='string'&&displayName){%>
+                         <th class="text-center col-2">Name</th>
+                         <th class="text-center col-2">Mobile</th>
+                         
+                         <th class="text-center col-1">email</th>
+                        
+                         <th class="text-center col-1"></th>
+                         <th class="text-center col-1"></th>
+                         <%}else{%>
+                          <th class="text-center col-2">Name</th>
+                          <th class="text-center col-2">Mobile</th>
+                          
+                          <th class="text-center col-1">email</th>   
+                          <th class="text-center col-1"></th>            
+                          <th class="text-center col-1"></th> 
+                         <%}%>
+                         </tr>
+                         <%for(let count = 0; count < BusinessList.length; count ++){%>
+                             <tr>
+                               <%if(typeof displayName =='string'&&displayName){%>
+                                 <td class="text-center col-2"><%=BusinessList[count].name%></td>
+                                 <td class="text-center col-2"><%=BusinessList[count].mobile%></td>
+                              
+                                 
+                                 
+                                 <td class="text-center col-1"><%=BusinessList[count].email%></td>
+                                  
+                                 <td class="text-center col-1"><a href="/businessList/edit/<%=BusinessList[count]._id%>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Edit</a></td>
+                                 <td class="text-center col-1"><a href="/businessList/delete/<%=BusinessList[count]._id%>" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>
+                                 <%}else{%>
+                                   <td class="text-center col-2"><%=BusinessList[count].name%></td>
+                                 <td class="text-center col-2"><%=BusinessList[count].mobile%></td>
+                                 
+                                 
+                                 <td class="text-center col-1"><%=BusinessList[count].email%></td>
+                                 <td class="text-center col-3">
+                                  <a href="/businessList/edit/<%= BusinessList[count]._id %>" class="btn btn-primary btn-sm">
+                                  <i class="fas fa-pencil-alt"></i> Update</a>
+                                 </td>
+                                 <td class="text-center col-3">
+                                  <a href="/businessList/delete/<%= BusinessList[count]._id %>" class="btn btn-danger btn-sm">
+                                  <i class="fas fa-trash-alt"></i> Delete</a>
+                                 </td>   
+                                 
+
+                                 <%}%>
+                                 </tr>
+                                 <%}%>
+                                 
+                     </table>
+                 </div>
+                </div>
+        </div>
+    </section>
+    
+    <!--=====FOOTER======-->
+  
+    <%- include('../partials/footer') %>
+
+</body>
+</html>
